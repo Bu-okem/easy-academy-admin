@@ -1,0 +1,17 @@
+{
+  // The domain layer typechecks on its own terms - no Nuxt config, no Convex
+  // generated types, nothing from the app. If this passes, the layer is
+  // genuinely standalone. See docs/ARCHITECTURE.md.
+  "compilerOptions": {
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "target": "es2022",
+    "lib": ["es2022"],
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "types": ["node"],
+    "noEmit": true,
+    "skipLibCheck": true
+  },
+  "include": ["**/*.ts"]
+}

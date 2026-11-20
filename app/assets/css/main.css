@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply bg-page text-ink antialiased;
+    font-family: theme('fontFamily.sans');
+  }
+
+  body {
+    @apply text-body;
+  }
+
+  /* Ledger feel: stat numbers align in columns and keep oldstyle figures
+     where the face provides them. See DESIGN.md section 2. */
+  .font-display {
+    font-variant-numeric: tabular-nums oldstyle-nums;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-brass/30;
+  }
+}
